@@ -1,0 +1,19 @@
+$pure-button {
+    /* Structure */
+    -webkit-user-drag: none;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    line-height: normal;
+    text-align: center;
+    user-select: none;
+    vertical-align: baseline;
+    white-space: nowrap;
+    zoom: 1;
+
+    /* Firefox: Get rid of the inner focus border */
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}

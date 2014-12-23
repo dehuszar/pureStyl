@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('buttons');
+    this.route('forms');
+    this.route('responsive');
+    this.route('menus');
+    this.route('menus');
+    this.route('tables');
 });
 
 export default Router;
