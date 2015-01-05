@@ -6,6 +6,10 @@
 @import 'pure/grids/grids-responsive'
 @import 'pure/forms/forms'
 @import 'pure/forms/forms-r'
+//@import 'pure/menus/menus-core'
+@import 'pure/menus/menus-paginator'
+@import 'pure/menus/menus-r'
+@import 'pure/menus/menus'
 
 html, 
 button, 
@@ -515,4 +519,52 @@ img {
 
 .pure-u-24-24 {
     @extend $pure-u-24-24;
+}
+
+// Menus
+.menu-horz,
+.menu-vert {
+    @extend $pure-menu;
+    @extend $pure-menu-open;
+
+    > a,
+    .menu-heading {
+        @extend $pure-menu a;
+        @extend $pure-menu-heading;
+    }
+
+    .selected {
+        a {
+            @extend $pure-menu-selected a;
+        }
+    }
+
+    .parent {
+        @extend $pure-menu-can-have-children;
+
+        > a {
+            @extend $pure-menu-can-have-children $pure-menu-label
+        }
+    }
+
+    [disabled] {
+        @extend $pure-menu-disabled;
+    }
+}
+
+.menu-horz {
+    @extend $pure-menu-horizontal;
+    
+    > a,
+    .menu-heading {
+        @extend $pure-menu-horizontal $pure-menu-heading;
+    }
+
+    .parent {
+        @extend $pure-menu-horizontal $pure-menu-can-have-children;
+
+        > a {
+            @extend $pure-menu-horizontal $pure-menu-can-have-children $pure-menu-label
+        }
+    }
 }

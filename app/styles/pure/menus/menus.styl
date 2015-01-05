@@ -1,0 +1,233 @@
+/* MAIN MENU STYLING */
+
+$pure-menu {
+
+    /* LINK STYLES */
+
+    a {
+        border-left: none;
+        border-right: none;
+        border: 1px solid transparent;
+        color: #777;
+        display: block;
+        line-height: 1.5em;
+        padding: 5px 20px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    /* LIST STYLES */
+    ul {
+        left: -10000px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -10000px;
+        visibility: hidden;
+        z-index: 1;
+    }
+    
+    > ul {
+        position: relative;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            padding: 5px 20px;
+
+            &:hover,
+            &:focus {
+                background: #eee;
+            }
+        }
+    }
+
+    /* Focus style for a dropdown menu-item when the parent has been opened */
+    $pure-menu-open {
+        background: #dedede;
+    }
+}
+
+/* OPEN STATES */
+$pure-menu-open,
+$pure-menu-horizontal li $pure-menu-children {
+    background: #fff; /* Old browsers */
+    border: 1px solid #b7b7b7;
+}
+
+$pure-menu-open {
+    visibility: visible;
+    width: 100%;
+    z-index: 2;
+
+    > ul {
+        left: 0;
+        top: 0;
+        visibility: visible;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    /* FIXED MENU */
+    &$pure-menu-fixed {
+        border: none;
+        border-bottom: 1px solid #b7b7b7;
+    }
+}
+
+/* DISABLED STATES */
+$pure-menu-disabled {
+    a {
+        color: #bfbfbf;
+
+        &:hover,
+        &:focus {
+            background: #fff;
+            color: #bfbfbf;
+        }
+    }
+
+    > a {
+        background-image: none;
+        border-color: transparent;
+        cursor: default;
+    }
+}
+
+$pure-menu-can-have-children {
+
+    > li:after {
+        color: #777;
+    }
+
+    > li:hover:after {
+        color: #fff;
+    }
+
+    $pure-menu-disabled > a:after {
+        color: #bfbfbf;
+    }
+}
+
+/* ACTIVE MENU ITEM */
+$pure-menu-selected {
+    a {
+        color: #000;
+    }
+}
+
+/* HEADINGS */
+
+$pure-menu-heading {
+    border-bottom-color: #dfdfdf;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #565d64;
+    font-size: 90%;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+}
+
+
+/* MENU TYPES */
+
+/* HORIZONTAL MENU CODE */
+
+/* Initial menus should be inline-block so that they are horizontal */
+$pure-menu-horizontal {
+    border: none;
+
+    > ul {
+        display: inline-block;
+        *display: inline;
+        vertical-align: middle;
+        zoom: 1;
+    }
+
+    li {
+        display: inline-block;
+        *display: inline;
+        vertical-align: middle;
+        zoom: 1;
+
+        /* Adjusting separator for vertical menus */
+        &.pure-menu-separator {
+            height: 50%;
+            width: 1px;
+            margin: 0 7px;
+        }
+
+        /* Submenus should still be display: block; */
+        li {
+            display: block;
+
+            /* Submenus should be horizontal separator again */
+            &.pure-menu-separator {
+                height: 1px;
+                width: auto;
+                margin: 7px 2px;
+            }
+        }
+    }
+
+    /*Add extra padding to elements that have the arrow so that the hover looks nice */
+    $pure-menu-can-have-children {
+        $pure-menu-label {
+        padding-right: 30px;
+
+        /* Content after should be down arrow */
+        &:after {
+            content: "\25BE";
+        }
+    }
+
+    $pure-menu-heading {
+        border: none;
+        display: inline-block;
+        *display: inline;
+        margin: 0;
+        vertical-align: middle;
+        zoom: 1;
+    }
+}
+
+/* FIXED MENU */
+$pure-menu-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+$pure-menu-can-have-children {
+    $pure-menu-label {
+        padding-right: 30px;
+
+        &:after {
+            content: '\25B8';
+            float: right;
+            /* These specific fonts have the Unicode char we need. */
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
+            margin-right: -20px;
+            margin-top: -1px;
+        }
+    }
+}
+
+$pure-menu-separator {
+    background-color: #dfdfdf;
+    display: block;
+    height: 1px;
+    font-size: 0;
+    margin: 7px 2px;
+    overflow: hidden;
+}
+
+$pure-menu-hidden {
+    display: none;
+}
