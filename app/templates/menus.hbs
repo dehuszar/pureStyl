@@ -2,57 +2,43 @@
 
 <h2>Horizontal Menu</h2>
 
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">Site Title</a>
+<div class="menu-horz">
+    <a href="#" class="menu-heading">Site Title</a>
     <ul>
         <li><a href="#">Home</a></li>
-        <li class="pure-menu-selected"><a href="#">Flickr</a></li>
+        <li class="selected"><a href="#">Flickr</a></li>
         <li><a href="#">Messenger</a></li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Finance</a></li>
-        <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
-    </ul>
-</div>
-
-<h2>Horizontal Menu (Custom)</h2>
-
-<div id="menu-1" class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">Site Title</a>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li class="pure-menu-selected"><a href="#">Flickr</a></li>
-        <li><a href="#">Messenger</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Finance</a></li>
-        <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
+        <li disabled><a href="#">Disabled</a></li>
     </ul>
 </div>
 
 <h2>Vertical Menu</h2>
 
-<div class="pure-menu pure-menu-open">
-    <a href="#" class="pure-menu-heading">Site Title</a>
+<div class="menu-vert">
+    <a href="#" class="menu-heading">Site Title</a>
     <ul>
-        <li class="pure-menu-selected"><a href="#">Home</a></li>
+        <li class="selected"><a href="#">Home</a></li>
         <li><a href="#">Flickr</a></li>
         <li><a href="#">Messenger</a></li>
-        <li class="pure-menu-heading">Yahoo! Sites</li>
+        <li class="menu-heading">Yahoo! Sites</li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Finance</a></li>
-        <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
+        <li disabled><a href="#">Disabled</a></li>
     </ul>
 </div>
 
-<div class="pure-menu pure-menu-open">
+<div class="menu-vert">
     <ul>
-        <li class="pure-menu-heading">Site Title</li>
-        <li class="pure-menu-selected"><a href="#">Home</a></li>
+        <li class="menu-heading">Site Title</li>
+        <li class="selected"><a href="#">Home</a></li>
         <li><a href="#">Flickr</a></li>
         <li><a href="#">Messenger</a></li>
-        <li class="pure-menu-heading">Yahoo! Sites</li>
+        <li class="menu-heading">Yahoo! Sites</li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Finance</a></li>
-        <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
+        <li disabled><a href="#">Disabled</a></li>
     </ul>
 </div>
 
@@ -63,19 +49,19 @@
     Adding dropdowns to menus requires the use of JavaScript. The <code>Y.Menu</code> module adds dropdown functionality and the ability to create JavaScript menus. It uses <code>csslist</code> to style these menus, so they look identical.
 </p>
 
-<div id="horizontal-menu">
-    <a href="#" class="pure-menu-heading">Site Title</a>
+<div id="horizontal-menu" class="menu-horz">
+    <a href="#" class="menu-heading">Site Title</a>
     <ul id="std-menu-items">
-        <li class="pure-menu-selected"><a href="#">Flickr</a></li>
+        <li class="selected"><a href="#">Flickr</a></li>
         <li><a href="#">Messenger</a></li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Finance</a></li>
-        <li class="pure-menu-separator"></li>
-        <li>
-            <a href="#">Other</a>
+        <li class="separator"></li>
+        <li class="parent">
+            <a href="#" class="label">Other</a>
             <ul>
-                <li class="pure-menu-heading">More from Yahoo!</li>
-                <li class="pure-menu-separator"></li>
+                <li class="menu-heading">More from Yahoo!</li>
+                <li class="separator"></li>
                 <li><a href="#">Autos</a></li>
                 <li><a href="#">Flickr</a></li>
                 <li><a href="#">Answers</a></li>
