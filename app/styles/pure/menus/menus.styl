@@ -74,7 +74,7 @@ $pure-menu-open {
     }
 
     /* FIXED MENU */
-    &$pure-menu-fixed {
+    $pure-menu-fixed {
         border: none;
         border-bottom: 1px solid #b7b7b7;
     }
@@ -82,6 +82,7 @@ $pure-menu-open {
 
 /* DISABLED STATES */
 $pure-menu-disabled {
+
     a {
         color: #bfbfbf;
 
@@ -116,6 +117,7 @@ $pure-menu-can-have-children {
 
 /* ACTIVE MENU ITEM */
 $pure-menu-selected {
+
     a {
         color: #000;
     }
@@ -175,17 +177,6 @@ $pure-menu-horizontal {
         }
     }
 
-    /*Add extra padding to elements that have the arrow so that the hover looks nice */
-    $pure-menu-can-have-children {
-        $pure-menu-label {
-        padding-right: 30px;
-
-        /* Content after should be down arrow */
-        &:after {
-            content: "\25BE";
-        }
-    }
-
     $pure-menu-heading {
         border: none;
         display: inline-block;
@@ -205,6 +196,7 @@ $pure-menu-fixed {
 }
 
 $pure-menu-can-have-children {
+
     $pure-menu-label {
         padding-right: 30px;
 
@@ -215,6 +207,15 @@ $pure-menu-can-have-children {
             font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
             margin-right: -20px;
             margin-top: -1px;
+        }
+
+        $pure-menu-horizontal & {
+            padding-right: 30px;
+
+            /* Content after should be down arrow */
+            &:after {
+                content: "\25BE";
+            }
         }
     }
 }
@@ -231,3 +232,4 @@ $pure-menu-separator {
 $pure-menu-hidden {
     display: none;
 }
+
