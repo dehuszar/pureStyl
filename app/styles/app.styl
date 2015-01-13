@@ -561,7 +561,6 @@ img {
     }
 
     .parent {
-        @extend $pure-menu-horizontal $pure-menu-can-have-children;
 
         > a {
             @extend $pure-menu-horizontal $pure-menu-can-have-children $pure-menu-label;
@@ -571,4 +570,20 @@ img {
 
 .paginator {
     @extend $pure-paginator;
+
+    li a {
+        @extend $pure-button;
+
+        &.active {
+            @extend $pure-button-active;
+        }
+
+        &.next {
+            @extend $pure-paginator $next;
+        }
+
+        &.prev {
+            @extend $pure-paginator $prev;
+        }
+    }
 }
