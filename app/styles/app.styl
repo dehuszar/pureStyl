@@ -10,6 +10,7 @@
 @import 'pure/menus/menus-paginator'
 @import 'pure/menus/menus-r'
 @import 'pure/menus/menus'
+@import 'pure/tables/tables'
 
 html, 
 button, 
@@ -586,4 +587,41 @@ img {
             @extend $pure-paginator $prev;
         }
     }
+}
+
+/* TABLES */
+
+// default table
+.default-table {
+    @extend $pure-table;
+}
+
+
+// bordered table
+.bordered-table {
+    @extend $pure-table;
+    @extend $pure-table-bordered;
+}
+
+// horizontal bordered table
+.horizontal-bordered-table {
+    @extend $pure-table;
+    @extend $pure-table-horizontal;
+}
+
+// striped tables
+.striped-table {
+    @extend $pure-table;
+    @extend $pure-table-striped;
+}
+
+.nth-child-table {
+    @extend $pure-table;
+    @extend $pure-table-striped;
+}
+
+// nested tables
+.nested-table {
+    @extend $pure-table;
+    @extend $pure-table-bordered;
 }
