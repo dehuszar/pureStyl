@@ -545,6 +545,10 @@ img {
         > a {
             @extend $pure-menu-can-have-children $pure-menu-label
         }
+
+        &.open {
+            @extend $pure-menu-open;
+        }
     }
 
     [disabled] {
@@ -561,10 +565,29 @@ img {
     }
 
     .parent {
-        @extend $pure-menu-horizontal $pure-menu-can-have-children;
+        @extend $pure-menu-can-have-children;
+
+        &.open {
+            border: 0;
+            outline: 0;
+            width: auto;
+        }
 
         > a {
             @extend $pure-menu-horizontal $pure-menu-can-have-children $pure-menu-label;
+        }
+
+        ul {
+            @extend .menu-vert;
+            position: absolute;
+            top: -10000;
+            width: 14em;
+        }
+
+        &.open ul {
+            left: -6.3em;
+            top: 2.25em;
+            width: auto;
         }
     }
 }
