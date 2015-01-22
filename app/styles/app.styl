@@ -603,6 +603,21 @@ img {
     }
 }
 
+.fixed-menu-toggle {
+    @extend $pure-button;
+}
+
+.fixed-menu {
+    @extend $pure-menu;
+    @extend $pure-menu-horizontal;
+    @extend $pure-menu-fixed;
+
+    &.open {
+        @extend $pure-menu-open;
+        @extend $pure-menu-open $pure-menu-fixed;
+    }
+}
+
 .paginator {
     @extend $pure-paginator;
 

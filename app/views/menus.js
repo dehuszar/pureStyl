@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
     didInsertElement: function() {
+        Ember.$('.fixed-menu-toggle').on('click', function (e){
+            e.preventDefault();
+            Ember.$('.fixed-menu').toggleClass('open');
+        });
         Ember.$('.parent').on({
             'click': function(e) {
                 e.preventDefault();
