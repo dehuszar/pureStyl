@@ -1,4 +1,4 @@
-# Pure-styl
+# pureStyl
 
 pureStyl is an attempt (currently incomplete) at porting Yahoo's Pure over to Stylus.  Pure is great, but like other layout frameworks relies on littering your markup with utility classes.  As pre-processors allow you to set variables, I've converted all the utility classes over to Stylus variables so they can instead be mapped to more meaningful, semantic selectors --classes or otherwise.
 
