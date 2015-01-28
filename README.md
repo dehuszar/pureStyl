@@ -1,10 +1,10 @@
 # Pure-styl
 
-pureStyle is an attempt (currently incomplete) at porting PureCSS over to Stylus.  PureCSS is great, but like other layout frameworks relies on littering your markup with utility classes.  As pre-processors allow you to set variables, I've converted all the utility classes over to Stylus variables so they can instead be mapped to more meaningful, semantic selectors --classes or otherwise.
+pureStyl is an attempt (currently incomplete) at porting Yahoo's Pure over to Stylus.  Pure is great, but like other layout frameworks relies on littering your markup with utility classes.  As pre-processors allow you to set variables, I've converted all the utility classes over to Stylus variables so they can instead be mapped to more meaningful, semantic selectors --classes or otherwise.
 
 This is still a work in process and should not be used for production unless you're prepared to do a bit of a haul.  Examples and more detailed explanations are forthcoming, but don't hesitate to ask if you have any questions.
 
-I'm using Ember-CLI as my build tool and demo platform.  If you are just looking to access the stylus files, feel free to drop the "app/pure/" folder into your preferred Stylus build stack and let 'er rip.  The "app.styl" file provides initial remapping examples for setting up the demos.  Since I am remapping the classes to rebuild the PureCSS docs which demos each class, the mileage gained from this strategy is not uber apparent.  Once the initial docs have been re-created and the library completely ported, I'll have some ninja demos that cut more to the point of the exercise.
+I'm using Ember-CLI as my build tool and demo platform.  If you are just looking to access the stylus files, feel free to drop the "app/styles/pure/" folder into your preferred Stylus build stack and let 'er rip.  The "app.styl" file provides initial remapping examples for setting up the demos.  Since I am remapping the classes to rebuild the Pure docs which demos each class, the mileage gained from this strategy is not uber apparent.  Once the initial docs have been re-created and the library completely ported, I'll have some ninja demos that cut more to the point of the exercise.
 
 Stay tuned.
 
